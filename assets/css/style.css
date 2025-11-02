@@ -1,0 +1,39 @@
+/* Minimal site styles for Unciv iOS Support */
+:root{
+  --accent:#0b5c7f;
+  --muted:#6b7280;
+  --bg:#ffffff;
+  --panel:#fbfbfb;
+}
+html,body{height:100%;}
+body{
+  margin:0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color:#1f2937;
+  background:var(--bg);
+  line-height:1.6;
+}
+.container{max-width:1000px;margin:0 auto;padding:0 1rem}
+.site-header{background:#f8f9fb;border-bottom:1px solid #e6e9ee}
+.site-header .container{padding:0.75rem 1rem}
+.site-title{margin:0;font-size:1.125rem}
+.site-title a{color:var(--accent);text-decoration:none}
+
+.site-body{display:flex;min-height:calc(100vh - 120px)}
+.sidebar{width:260px;background:var(--panel);border-right:1px solid #eaecef;padding:1.25rem}
+.sidebar ul{list-style:none;padding:0;margin:0}
+.sidebar li{margin:0.5rem 0}
+.sidebar a{color:#0b5c7f;text-decoration:none}
+.sidebar a:hover{text-decoration:underline}
+
+.site-content{flex:1;padding:1.5rem}
+.site-content h2{margin-top:0}
+
+.site-footer{border-top:1px solid #e6e9ee;background:#fafafa;padding:1rem}
+.site-footer .container{font-size:0.9rem;color:var(--muted)}
+
+/* Responsive: collapse sidebar on narrow screens */
+@media (max-width: 800px){
+  .site-body{flex-direction:column}
+  .sidebar{width:100%;border-right:none;border-bottom:1px solid #eaecef}
+}

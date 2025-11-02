@@ -1,0 +1,24 @@
+title: "Unciv iOS Support"
+description: "Support and documentation for the iOS version of the open-source game Unciv."
+baseurl: ""
+url: ""
+markdown: kramdown
+permalink: pretty
+plugins: []
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+# Exclude development files and local artifacts from the site build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .bundle
+  - .sass-cache
+  - .jekyll-cache
+  - node_modules
+  - _site
