@@ -1,7 +1,9 @@
 source "https://rubygems.org"
 
-gem "jekyll", "~> 4.4"
-gem "webrick", "~> 1.7"
+# Use the GitHub Pages gem so the repository uses the same versions GitHub Pages
+# expects. This avoids the "github-pages gem can't satisfy your Gemfile's
+# dependencies" warning when the Pages backend builds your site.
+gem "github-pages", "~> 232", group: :jekyll_plugins
 
 # Development / CI tools
 group :development do
